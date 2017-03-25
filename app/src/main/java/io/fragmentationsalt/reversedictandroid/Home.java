@@ -2,6 +2,8 @@ package io.fragmentationsalt.reversedictandroid;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -13,6 +15,13 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Button bsend = (Button) findViewById(R.id.button);
+        bsend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                send();
+            }
+        });
     }
     public void send()
     {
